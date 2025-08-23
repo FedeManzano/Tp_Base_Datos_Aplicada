@@ -13,6 +13,3 @@ BEGIN
    EXEC('CREATE SCHEMA ddbba')
 END 
 
-
-
-
