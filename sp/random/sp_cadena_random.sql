@@ -1,5 +1,35 @@
 USE db_grupo_bases_datos_ap
 
+
+/**
+    Procedimiento almacenado para generar una cadena de caracteres numérica 
+    de forma random. Recibe tres parámetros de entrada y uno de sus parámetros es de salida.
+
+    @I_RANGO es el inicio del rango de valores posibles que se desee para la cadena de salida
+    POR EJ: 0123456789 Si no queremos utilizar todos estos valores podemos elegir un valor inicia diferente
+    @I_RANGO = 2
+    @F_RANGO = 7 Con esto limitamos los valores que nos entrega el procedimiento
+
+    El otro parámetro es la cantidad de caracteres que van a componer la cadena resultado
+    POR EJ si es un código de materia de 4 caracteres numéricos
+
+    EXEC ddbba.sp_Cadena_Random 0,9,4, @S_RES = @CAD_SALIDA OUTPUT
+
+    Salida: 0512 // posible salida
+
+    El procedimiento también devuelve un valor entero
+    1: Si se pudo calcular la cadena
+    0: No se pudo calcular la cadena
+
+    Para ver el valor entero en pantalla 
+
+    DECLARE @RES INT = 0 // Lo defino en 0 para empezar
+
+    EXEC @RES = ddbba.sp_Cadena_Random 0,9,4, @S_RES = @CAD_SALIDA OUTPUT 
+    SELECT @RES
+*/
+
+
 GO
 CREATE OR ALTER PROCEDURE ddbba.sp_Cadena_Random
 @I_RANGO    INT, -- INICIO DEL RANGO DE VALORES POR EJ 2
