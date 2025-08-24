@@ -6,6 +6,7 @@ USE master
 
 IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'db_grupo_bases_datos_ap')
 BEGIN
+    -- El nombre lo podemos cambiar con la instrucción RENAME
     CREATE DATABASE db_grupo_bases_datos_ap
 END 
 
@@ -23,6 +24,7 @@ END
     /tb/tb_Registro.sql
 
     PROCEDIMIENTOS ALMACENADOS SCHEMA ddbba 
+
     /sp/random/sp_cadena_random.sql
     /sp/random/sp_generar_dni_random.sql
     /sp/sp_insertar_log.sql
