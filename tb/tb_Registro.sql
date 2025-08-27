@@ -28,5 +28,6 @@ BEGIN
     )
 END 
 
+
 --DROP TABLE ddbba.Registro
 
