@@ -45,7 +45,7 @@ AS
 BEGIN 
     IF @I_RANGO < 0 OR @I_RANGO >= @F_RANGO
         RETURN 0
-    IF @F_RANGO < 0 OR @F_RANGO > 9
+    IF @F_RANGO < 0 OR @F_RANGO >= 10
         RETURN 0
     IF @C_CAR <= 0
         RETURN 0
