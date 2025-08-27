@@ -17,13 +17,13 @@ BEGIN
         -- Restricción explícita: Campo texto solo puede tener hasta 50 caracteres
         CONSTRAINT CK_Texto CHECK
         (
-            LEN(Texto) >= 0 AND LEN(Texto) <= 50
+            LEN(Texto) <= 50
         ),
 
         -- Restricción explícita: Campo modulo solo puede tener hasta 10 caracteres
         CONSTRAINT CK_Modulo CHECK 
         (
-            LEN(Modulo) >= 0 AND LEN(Modulo) <= 10
+           LEN(Modulo) <= 10
         )
     )
 END 

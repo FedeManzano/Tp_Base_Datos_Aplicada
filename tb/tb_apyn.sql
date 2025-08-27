@@ -38,12 +38,3 @@ VALUES
 ('Santiago', 'Sanchez'),
 ('Carla', 'Brasa'),
 ('Bernardo', 'Gimenez')
-
-
-
-
-DECLARE @RES VARCHAR(5) = ''
-EXEC ddbba.sp_Cadena_Random 1,9,2, @S_RES = @RES OUTPUT
-SELECT *
-FROM ddbba.Apyn 
-WHERE IdApyn = CONVERT(INT, @RES ) % 29 + 1

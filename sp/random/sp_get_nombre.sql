@@ -8,7 +8,7 @@ BEGIN
     EXEC ddbba.sp_Cadena_Random 1,9,2, @S_RES = @RES OUTPUT
     SELECT @NOMBRE = Nombre
     FROM ddbba.Apyn 
-    WHERE IdApyn = CONVERT(INT, @RES ) % 29 + 1
+    WHERE IdApyn = CONVERT(INT, @RES ) %  (SELECT COUNT(1) FROM ddbba.Apyn ) + 1
 END
 --DECLARE @NOM VARCHAR(25) = ''
 --EXEC ddbba.sp_Get_Nombre @NOMBRE = @NOM OUTPUT 
