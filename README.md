@@ -1,11 +1,22 @@
 # TP Nro 1 Base de Datos Aplicada
 
+<p align="center">
+  <img src="logo/logo-uni.png"/>
+  
+</p>
+<p align='center'>
+    <a  href='https://www.unlam.edu.ar/'>Unlam Sitio Oficial</a>
+</p>
+
+<br/>
+<br/>
+
 ## Integrantes
 
-- GONZÁLEZ FERNÁNDEZ, IVÁN ALEJANDRO
-- LORENZANA, AGUSTÍN NICOLAS
-- MANZANO, FEDERICO
-- RODRIGUEZ CHRISTIAN MARTIN
+- [GONZÁLEZ FERNÁNDEZ, IVÁN ALEJANDRO]()
+- [LORENZANA, AGUSTÍN NICOLAS]()
+- [MANZANO, FEDERICO](https://github.com/FedeManzano)
+- [RODRIGUEZ CHRISTIAN MARTIN]()
 
 Trabajo práctico número de de Bases de Datos Aplicada, equipo: [SQL Wrriors](https://github.com/SQL-Warriors/TP_1_Base_De_Datos_Aplicada)
 
