@@ -22,11 +22,17 @@ END
 
     TABLAS SCHEMA ddbba 
     /tb/tb_Registro.sql
+    /tb/tb_Persona.sql
+    /tb/tb_apyn.sql
+
 
     PROCEDIMIENTOS ALMACENADOS SCHEMA ddbba 
 
     /sp/random/sp_cadena_random.sql
+    /sp/random/sp_cadena_random_letras.sql
     /sp/random/sp_generar_dni_random.sql
+    /sp/random/sp_get_nombre.sql
+    /sp/random/sp_get_apellido.sql
     /sp/sp_insertar_log.sql
 
     TEST SCHEMA test

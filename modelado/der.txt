@@ -1,5 +1,0 @@
-
-En este directorio podemos poner el DER de la base de datos
-
-Una captura PNG y el archivo proveniente de drawio
-
