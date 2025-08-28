@@ -23,7 +23,7 @@ BEGIN
     DECLARE @TEXTO VARCHAR(50) = ''
     WHILE @CANT_REG < 1100
     BEGIN 
-        EXEC ddbba.sp_Cadena_Random 1, 5, 1, @S_RES = @ESTADO 
+        EXEC ddbba.sp_Cadena_Random 1, 5, 1, @S_RES = @ESTADO OUTPUT
         SET @DNI = (SELECT TOP(1) Dni FROM ddbba.Persona_AUX)
         IF @ESTADO = '1' OR @ESTADO = '2' OR @ESTADO = '3'
         BEGIN 
@@ -55,4 +55,7 @@ BEGIN
 END
 
 
-EXEC sp_Generar_Alumnos_Docentes
+--EXEC sp_Generar_Alumnos_Docentes
+
+--SELECT * FROM ddbba.Alumno alu INNER JOIN ddbba.Docente doc ON doc.DniPersona = alu.DniPersona
+-- SELECT * FROM ddbba.Registro
