@@ -8,7 +8,10 @@ BEGIN
         Dni CHAR(8) PRIMARY KEY,
         Nombre VARCHAR(20) NOT NULL,
         Apellido VARCHAR(20) NOT NULL,
-        Fecha_Nacimiento DATE NOT NULL
+        Fecha_Nacimiento DATE NOT NULL,
+        IdLocalidad INT NOT NULL,
+        Telefono VARCHAR(14),
+        CONSTRAINT FK_Localidad FOREIGN KEY(IdLocalidad) REFERENCES ddbba.Localidad(IdLocalidad)
     )
 END 
 

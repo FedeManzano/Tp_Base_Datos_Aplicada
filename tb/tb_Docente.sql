@@ -12,7 +12,11 @@ BEGIN
     )
 END 
 
-DROP TABLE ddbba.Docente
+--DROP TABLE ddbba.Docente
+SELECT * FROM ddbba.Registro
+
+
+
 
 
 

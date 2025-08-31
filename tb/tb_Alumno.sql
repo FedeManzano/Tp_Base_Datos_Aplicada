@@ -5,7 +5,7 @@ BEGIN
     CREATE TABLE ddbba.Alumno 
     (
         DniPersona CHAR(8) PRIMARY KEY,
-        FechaIngreso DATETIME NOT NULL,
+        FechaIngreso DATE NOT NULL,
         CONSTRAINT FK_DNIPERSONA 
         FOREIGN KEY(DniPersona) REFERENCES  ddbba.Persona(Dni) ON DELETE CASCADE
     )
