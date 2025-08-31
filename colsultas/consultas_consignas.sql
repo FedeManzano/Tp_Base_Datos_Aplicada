@@ -2,12 +2,20 @@
 USE db_grupo_bases_datos_ap
 
 /***
-    Ejercicio 9 Eliminar duplicados de la tabla Alumnos/Persona que tengan el nombre y apellido duplicado
+    Ejercicio 9 Eliminar duplicados de la tabla Alumnos/Persona que tengan el mismo nombre , apellido y Localidad
     no se puede hacer por DNI porque no hay duplicados.
 */
 
+WITH Personas_Duplicadas (Dni, Nombre, Apellido, Fecha_Nac, IdLocalidad, Telefono, REPETIDOS) 
+AS 
+(
+    SELECT per.Dni, per.Nombre, per.Apellido, per.Fecha_Nacimiento, per.IdLocalidad, per.Telefono,
+        COUNT(*) OVER (PARTITION BY per.Nombre, per.Apellido, per.IdLocalidad) AS REPETIDOS
+    FROM ddbba.Persona AS per 
+)
 
 
+DELETE FROM Personas_Duplicadas WHERE REPETIDOS > 1
 
 
 
