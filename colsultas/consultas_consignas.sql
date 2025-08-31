@@ -1,6 +1,16 @@
 
 USE db_grupo_bases_datos_ap
 
+/***
+    Ejercicio 9 Eliminar duplicados de la tabla Alumnos/Persona que tengan el nombre y apellido duplicado
+    no se puede hacer por DNI porque no hay duplicados.
+*/
+
+
+
+
+
+
 
 /***
     Obtiene las personas que estan entre el 5% mas joven y las que son 5% mas viejas según la edad

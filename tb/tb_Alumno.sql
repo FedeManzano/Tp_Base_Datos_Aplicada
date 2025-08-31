@@ -7,7 +7,9 @@ BEGIN
         DniPersona CHAR(8) PRIMARY KEY,
         FechaIngreso DATETIME NOT NULL,
         CONSTRAINT FK_DNIPERSONA 
-        FOREIGN KEY(DniPersona) REFERENCES  ddbba.Persona(Dni)
+        FOREIGN KEY(DniPersona) REFERENCES  ddbba.Persona(Dni) ON DELETE CASCADE
     )
 END 
+
+--DROP TABLE ddbba.Alumno
 

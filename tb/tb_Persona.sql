@@ -8,7 +8,7 @@ BEGIN
         Dni CHAR(8) PRIMARY KEY,
         Nombre VARCHAR(20) NOT NULL,
         Apellido VARCHAR(20) NOT NULL,
-        Edad VARCHAR(2)       
+        Fecha_Nacimiento DATE NOT NULL
     )
 END 
 

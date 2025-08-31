@@ -9,7 +9,9 @@ BEGIN
     DECLARE @D VARCHAR(8) = ''
     DECLARE @NOMBRE VARCHAR(20) = ''
     DECLARE @APELLIDO VARCHAR(20) = ''
-    DECLARE @EDAD VARCHAR(2) = '' 
+    DECLARE @FECHA_RAN DATE 
+    DECLARE @ID_FECHA_RAN VARCHAR(2) = ''
+
 
     DECLARE @TEXTO VARCHAR(50) = ''
 
@@ -18,21 +20,32 @@ BEGIN
         EXEC ddbba.sp_Generar_Dni @DNI = @D OUTPUT
         EXEC ddbba.sp_Get_Nombre @NOMBRE = @NOMBRE OUTPUT
         EXEC ddbba.sp_Get_Apellido @APELLIDO = @APELLIDO OUTPUT
-        EXEC ddbba.sp_Cadena_Random 1,7,2, @S_RES = @EDAD OUTPUT
-        SET @TEXTO = 'I: '+ @D + '|' + @NOMBRE + '|' + @APELLIDO + '|' + @EDAD
+
+        EXEC ddbba.sp_Cadena_Random 0, 2, 2, @S_RES = @ID_FECHA_RAN OUTPUT
+
+        DECLARE @ID_FECHA_RAN_INT INT = ddbba.fn_Seleccionar_Id_Fecha(@ID_FECHA_RAN)
+
+        SET @FECHA_RAN = 
+        (
+            SELECT FE.FechaRan
+            FROM ddbba.Fechas AS FE 
+            WHERE FE.IdFechas = @ID_FECHA_RAN_INT
+        )
+        SELECT @ID_FECHA_RAN_INT  
+        SET @TEXTO = 'I: '+ @D + '|' + @NOMBRE + '|' + @APELLIDO + '|' + CAST(@FECHA_RAN AS VARCHAR(11))
 
         EXEC ddbba.sp_Insertar_Log 'ddbba.Registro', @TEXTO
-        INSERT INTO ddbba.Persona(Dni, Nombre, Apellido, Edad)
-        VALUES(@D, @NOMBRE, @APELLIDO, @EDAD)
+        INSERT INTO ddbba.Persona(Dni, Nombre, Apellido, Fecha_Nacimiento)
+        VALUES(@D, @NOMBRE, @APELLIDO, @FECHA_RAN)
 
 
         SET @D = ''
         SET @NOMBRE = ''
         SET @APELLIDO = ''
-        SET @EDAD = '' 
+        SET @ID_FECHA_RAN = '' 
         SET @I = @I + 1 
     END
 END
 
---EXEC ddbba.sp_Generar_1100_Personas
+EXEC ddbba.sp_Generar_1100_Personas
 SELECT * FROM ddbba.Persona

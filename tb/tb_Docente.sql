@@ -12,5 +12,7 @@ BEGIN
     )
 END 
 
+DROP TABLE ddbba.Docente
+
 
 

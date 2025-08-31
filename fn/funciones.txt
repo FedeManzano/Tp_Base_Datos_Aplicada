@@ -1,6 +1,0 @@
-
-En este directorio del proyecto van a ir las funciones usuario
-
-el formato sugerido es:
-
-CREATE OR ALTER FUNCTION fn_Nombre_Funcion(Parámetros...)

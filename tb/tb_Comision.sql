@@ -19,6 +19,7 @@ BEGIN
     )
 END 
 
+--DROP TABLE ddbba.Comision
 
 
 SELECT * FROM ddbba.Comision
