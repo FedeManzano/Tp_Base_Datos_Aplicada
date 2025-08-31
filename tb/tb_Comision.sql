@@ -53,3 +53,8 @@ VALUES
 ('01-1347', 1, 'TN', '10377676', '10089516', '1347'),
 ('01-1347', 1, 'TM', '10220447', '10089516', '1347'), 
 ('01-1347', 1, 'TN', '10103677', '10089516', '1347')
+
+
+SELECT DniPersona, FechaIngreso,
+    NTILE(100) OVER(ORDER BY DniPersona) GRUPO
+FROM ddbba.Alumno
