@@ -34,7 +34,7 @@ BEGIN
         SELECT @ID_FECHA_RAN_INT  
         SET @TEXTO = 'I: '+ @D + '|' + @NOMBRE + '|' + @APELLIDO + '|' + CAST(@FECHA_RAN AS VARCHAR(11))
 
-        EXEC ddbba.sp_Insertar_Log 'ddbba.Registro', @TEXTO
+        EXEC ddbba.sp_Insertar_Log 'Persona', @TEXTO
         INSERT INTO ddbba.Persona(Dni, Nombre, Apellido, Fecha_Nacimiento)
         VALUES(@D, @NOMBRE, @APELLIDO, @FECHA_RAN)
 

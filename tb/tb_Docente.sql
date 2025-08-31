@@ -8,7 +8,7 @@ BEGIN
         DniPersona CHAR(8) PRIMARY KEY,
         Cargo VARCHAR(20) NOT NULL,
         CONSTRAINT FK_DNI_PERSONA 
-        FOREIGN KEY(DniPersona) REFERENCES  ddbba.Persona(Dni)
+        FOREIGN KEY(DniPersona) REFERENCES  ddbba.Persona(Dni) ON DELETE CASCADE
     )
 END 
 
