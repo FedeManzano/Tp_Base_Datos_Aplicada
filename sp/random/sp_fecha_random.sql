@@ -39,6 +39,6 @@ BEGIN
     END 
 END
 
-EXEC sp_Fecha_Random 
+--EXEC sp_Fecha_Random 
 
 SELECT * FROM ddbba.Fechas

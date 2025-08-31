@@ -56,6 +56,3 @@ END
 
 
 --EXEC sp_Generar_Alumnos_Docentes
-
---SELECT * FROM ddbba.Alumno alu INNER JOIN ddbba.Docente doc ON doc.DniPersona = alu.DniPersona
--- SELECT * FROM ddbba.Registro
