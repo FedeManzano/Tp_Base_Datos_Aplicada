@@ -8,11 +8,7 @@ BEGIN
         Patente CHAR(7) PRIMARY KEY,
         Modelo VARCHAR(20) NOT NULL,
         DniPersona CHAR(8),
-        CONSTRAINT FK_Persona FOREIGN KEY(DniPersona) REFERENCES ddbba.Persona(Dni),
-       /* CONSTRAINT CK_Patente CHECK
-        (
-            Patente LIKE '[A-Z][A-Z][A-Z] [0-9][0-9][0-9]'
-        ) */
+        CONSTRAINT FK_Persona FOREIGN KEY(DniPersona) REFERENCES ddbba.Persona(Dni)
     )
 END
 
