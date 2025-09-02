@@ -31,7 +31,7 @@ BEGIN
     ) + 1
     
     DECLARE @TEXTO VARCHAR(50) = CAST( @NRO_COMISION AS VARCHAR(2)) + '|' + @COD_MAT 
-                                + '|' + @DNI_DOCENTE + '|' + @TURNO + '|' + @NRO_CUATRI
+                                + '|' + @DNI_DOCENTE + '|' + @TURNO + '|' + CAST(@NRO_CUATRI AS VARCHAR(1))
 
     EXEC ddbba.sp_insertar_log 'ddbba.Comision', @TEXTO
     INSERT INTO ddbba.Comision(NroComision, CodMateria, DniDocente, Ano, NroCuatrimestre, Turno)  

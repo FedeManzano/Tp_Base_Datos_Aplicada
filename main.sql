@@ -59,8 +59,12 @@ END
     EXEC sp_Generar_Alumnos_Docentes
 
     /tb/tb_Materia.sql
-    /tb/tb_Comision.sql
+
+    /tb/tb_Comision.sql 
+    /sp/random/sp_insertar_comisiones.sql
+    Y todo el codigo del archivo /tb/tb_Comision.sql 
+
+
     /tb/tb_Dia_Semana.sql
     /tb/tb_Vehiculo.sql Todo el código del archivo
-
 */
