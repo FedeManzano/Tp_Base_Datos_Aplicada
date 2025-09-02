@@ -27,6 +27,7 @@ Trabajo práctico número de de Bases de Datos Aplicada, equipo: [SQL Warriors](
 
 ```SQL
 
+
 /*
     CREACIÓN DE ELEMENTOS:
     Primero crear los esquemas
@@ -69,10 +70,17 @@ Trabajo práctico número de de Bases de Datos Aplicada, equipo: [SQL Warriors](
     EXEC sp_Generar_Alumnos_Docentes
 
     /tb/tb_Materia.sql
-    /tb/tb_Comision.sql
+
+    /tb/tb_Comision.sql 
+    /sp/random/sp_insertar_comisiones.sql
+    Y todo el codigo del archivo /tb/tb_Comision.sql 
+
+    /tb/tb_Inscribe.sql 
+    /sp/random/sp_inscribe_comision.sql
+    /tb/tb_Inscribe.sql Código que está en el archivo debajo de la tabla
+
     /tb/tb_Dia_Semana.sql
     /tb/tb_Vehiculo.sql Todo el código del archivo
-
 */
 ```
 
@@ -81,44 +89,4 @@ Trabajo práctico número de de Bases de Datos Aplicada, equipo: [SQL Warriors](
 ```SQL
 EXEC('CREATE SCHEMA ddbba') -- Esquema del dominio de problema
 EXEC('CREATE SCHEMA test') -- Esquema de test unitarios
-```
-
-## Tablas
-
-[PATH Tablas](tb/)
-
-```SQL
--- BITÁCORA
-
-/**
-    Tabla Registro cumplirá la función de simular una bitácora (Log) cuando 
-    existan modificaciones en los datos de las tablas.
-*/
-CREATE TABLE ddbba.Registro 
-(
-    IdRegistro INT IDENTITY(1,1) PRIMARY KEY,
-    Fecha_y_Hora DATETIME DEFAULT GETDATE(), -- En cada inserción se carga en este campo la fecha y la hora actual
-    Texto VARCHAR(50),
-    Modulo VARCHAR(10),
-    -- Restricción explícita: Campo texto solo puede tener hasta 50 caracteres
-    CONSTRAINT CK_Texto CHECK
-    (
-        LEN(Texto) <= 50
-    ),
-    -- Restricción explícita: Campo modulo solo puede tener hasta 10 caracteres
-    CONSTRAINT CK_Modulo CHECK 
-    (
-       LEN(Modulo) <= 10
-    )
-)
-```
-
-```SQL
-CREATE TABLE ddbba.Persona 
-(
-        Dni CHAR(8) PRIMARY KEY,
-        Nombre VARCHAR(20) NOT NULL,
-        Apellido VARCHAR(20) NOT NULL,
-        Edad VARCHAR(2)       
-)
 ```
