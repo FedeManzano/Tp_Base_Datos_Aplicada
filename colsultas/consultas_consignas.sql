@@ -91,3 +91,17 @@ AS
     FROM ddbba.Persona per
 ) 
 
+
+-- 16. Cree una vista que utilice la función del punto anterior y muestre los alumnos con
+-- superposición de inscripciones.
+
+GO
+CREATE OR ALTER VIEW vw_Alumnos_Superpuestos 
+AS 
+(
+    SELECT *
+    FROM ddbba.fn_Superposicion_Inscripciones('16997225')
+    WHERE SUPERPUESTAS > 1
+)
+
+SELECT * FROM vw_Alumnos_Superpuestos 

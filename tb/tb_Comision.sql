@@ -10,15 +10,17 @@ BEGIN
         NroCuatrimestre TINYINT NOT NULL,
         CodMateria CHAR(4) NOT NULL,
         DniDocente CHAR(8) NOT NULL,
+        Turno CHAR(2) NOT NULL,
         Ano INT NOT NULL,
-        CONSTRAINT PK_COMISION PRIMARY KEY(NroComision, CodMateria, DniDocente),
+        CONSTRAINT PK_COMISION PRIMARY KEY(NroComision, CodMateria, DniDocente, NroCuatrimestre, Turno),
         CONSTRAINT FK_MATERIA FOREIGN KEY(CodMateria) REFERENCES ddbba.Materia(CodMateria),
         CONSTRAINT FK_DOCENTE FOREIGN KEY(DniDocente) REFERENCES ddbba.Docente(DniPersona),
     )
 END 
 
--- Agrega el turno a la comisión
-ALTER TABLE ddbba.Comision ADD Turno CHAR(2) NOT NULL
+--DROP TABLE ddbba.Comision
+--DROP TABLE ddbba.Inscribe
+
 
 DECLARE @DOCENTES_DNI TABLE 
 (

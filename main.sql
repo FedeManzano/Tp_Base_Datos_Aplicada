@@ -64,6 +64,9 @@ END
     /sp/random/sp_insertar_comisiones.sql
     Y todo el codigo del archivo /tb/tb_Comision.sql 
 
+    /tb/tb_Inscribe.sql 
+    /sp/random/sp_inscribe_comision.sql
+    /tb/tb_Inscribe.sql Código que está en el archivo debajo de la tabla
 
     /tb/tb_Dia_Semana.sql
     /tb/tb_Vehiculo.sql Todo el código del archivo

@@ -26,8 +26,9 @@ BEGIN
         SELECT COUNT(*)
         FROM ddbba.Comision AS com 
         WHERE com.CodMateria = @COD_MAT 
-            AND com.DniDocente = @DNI_DOCENTE 
-            AND com.NroCuatrimestre = @NRO_CUATRI 
+            OR com.NroCuatrimestre = @NRO_CUATRI 
+            OR com.Turno = @TURNO
+
     ) + 1
     
     DECLARE @TEXTO VARCHAR(50) = CAST( @NRO_COMISION AS VARCHAR(2)) + '|' + @COD_MAT 

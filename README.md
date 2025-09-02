@@ -90,3 +90,8 @@ Trabajo práctico número de de Bases de Datos Aplicada, equipo: [SQL Warriors](
 EXEC('CREATE SCHEMA ddbba') -- Esquema del dominio de problema
 EXEC('CREATE SCHEMA test') -- Esquema de test unitarios
 ```
+
+## No incluído
+
+Las validaciónes de los campos en general, esto se debe a que todas las tablas se generan de forma 
+random.

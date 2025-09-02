@@ -24,10 +24,10 @@ BEGIN
   IF NOT EXISTS (SELECT * FROM ddbba.Alumno WHERE DniPersona = @DNI_ALUMNO)
       RETURN 0
 
-   -- IF @DNI_ALUMNO = @DNI_DOC
-     --   RETURN 0
+   IF @DNI_ALUMNO = @DNI_DOC
+       RETURN 0
 
-    INSERT INTO ddbba.Inscribe (DniAlumno, CodMateria, DniDocente, NroComision)
-    VALUES(@DNI_ALUMNO, @COD_MATERIA, @DNI_DOC, @NRO_COMISION)
+    INSERT INTO ddbba.Inscribe (DniAlumno, CodMateria, DniDocente, NroComision, NroCuatrimestre, Turno)
+    VALUES(@DNI_ALUMNO, @COD_MATERIA, @DNI_DOC, @NRO_COMISION, @NRO_CUATR, @TURNO)
 
 END
