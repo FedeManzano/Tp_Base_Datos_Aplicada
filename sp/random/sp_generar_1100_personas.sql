@@ -56,5 +56,7 @@ BEGIN
 END
 
 --EXEC ddbba.sp_Generar_1100_Personas
+
+
 SELECT * FROM ddbba.Persona
 SELECT * FROM ddbba.Fechas
