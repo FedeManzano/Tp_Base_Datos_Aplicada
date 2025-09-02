@@ -56,5 +56,3 @@ END
 
 
 --EXEC sp_Generar_Alumnos_Docentes
-
-SELECT * FROM ddbba.Docente

@@ -26,28 +26,53 @@ Trabajo práctico número de de Bases de Datos Aplicada, equipo: [SQL Warriors](
 ## Creación de elementos en orden 
 
 ```SQL
+
 /*
     CREACIÓN DE ELEMENTOS:
+    Primero crear los esquemas
+    EXEC('CREATE SCHEMA ddbba')
+    EXEC('CREATE SCHEMA test')
 
-    TABLAS SCHEMA ddbba 
+
+    En Orden
     /tb/tb_Registro.sql
+    /tb/tb_Localidad.sql
     /tb/tb_Persona.sql
     /tb/tb_Alumno.sql
     /tb/tb_Docente.sql
-    /tb/tb_apyn.sql
+    /tb/tb_apyn.sql Y todos las tuplas que están en el mismo archivo
 
-    PROCEDIMIENTOS ALMACENADOS SCHEMA ddbba 
+    Luego de crear estas tablas crear
+    /sp/sp_insertar_log.sql
     /sp/random/sp_cadena_random.sql
-    /sp/random/sp_cadena_random_letras.sql
-    /sp/random/sp_generar_dni_random.sql
+    /sp/random/sp_cadena_random_letras.sql 
+    
+    /sp/random/sp_fechas_random.sql 
+    EXEC sp_Fecha_Random 
+
     /sp/random/sp_get_nombre.sql
     /sp/random/sp_get_apellido.sql
-    /sp/random/sp_generar_1100_personas.sql
-    /sp/sp_insertar_log.sql
+    /sp/random/sp_generar_telefono_random.sql
+    /sp/random/sp_generar_dni.sql
+    /sp/random/sp_insertar_log.sql
 
-    TEST SCHEMA test
-    /test/test.sql Para crear el esquema test 
-    /test/test_cad_random.sql TODAS LAS PRUEBAS EL SP ddbba.sp_Cadena_Random
+    Crear la función 
+    /fn/fn_seleccionar_id_fecha.sql
+
+    /sp/random/sp_localidad_random
+    EXEC ddbba.sp_Localidad_Random
+
+    /sp/random/sp_generar_1100_personas.sql
+    EXEC ddbba.sp_Generar_1100_Personas
+
+    /sp/random/sp_generar_alumnos_docentes.sql
+    EXEC sp_Generar_Alumnos_Docentes
+
+    /tb/tb_Materia.sql
+    /tb/tb_Comision.sql
+    /tb/tb_Dia_Semana.sql
+    /tb/tb_Vehiculo.sql Todo el código del archivo
+
 */
 ```
 
