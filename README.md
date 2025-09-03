@@ -12,10 +12,7 @@
 
 ## Integrantes
 
-- [GONZÁLEZ FERNÁNDEZ, IVÁN ALEJANDRO]()
-- [LORENZANA, AGUSTÍN NICOLAS]()
 - [MANZANO, FEDERICO](https://github.com/FedeManzano)
-- [RODRIGUEZ CHRISTIAN MARTIN]()
 
 Trabajo práctico número de de Bases de Datos Aplicada, equipo: [SQL Warriors](https://github.com/SQL-Warriors/TP_1_Base_De_Datos_Aplicada)
 
